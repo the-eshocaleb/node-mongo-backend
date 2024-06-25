@@ -9,7 +9,8 @@
     "release": "cross-env NODE_ENV=release node app.js",
     "test": "mocha test/*.spec.js --exit ",
     "start": "nodemon app.js",
-    "test:coverage": "nyc --reporter=text npm test"
+    "test:coverage": "nyc --reporter=text npm test",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -25,13 +26,16 @@
   "devDependencies": {
     "chai": "^4.4.1",
     "chai-as-promised": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "husky": "^9.0.11",
     "mocha": "^10.4.0",
     "nodemon": "^3.1.0",
-    "cross-env": "^7.0.3",
     "nyc": "^15.1.0",
     "rewire": "^7.0.0",
     "sinon": "^18.0.0",
     "sinon-chai": "^3.7.0",
     "supertest": "^7.0.0"
   }
+
+  
 }
