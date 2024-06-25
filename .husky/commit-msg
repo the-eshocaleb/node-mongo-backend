@@ -7,7 +7,7 @@
 # Get the commit message
 commit_message=$(cat "$1")
 
-echo "Commit message: $commit_message"
+echo $commit_message
 # Define the regex pattern for the commit message
 # pattern="^(feat|fix|test|chore): .+"
 
@@ -17,4 +17,4 @@ echo "Commit message: $commit_message"
 #   echo "Commit message should be in the format: <type>: <description>"
 #   echo "Allowed types: feat, fix, test, chore"
 #   exit 1
-# f
+# fi
