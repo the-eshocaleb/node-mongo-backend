@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Commit message format should be <type>: <description>
+# Allowed types are: feat, fix, test, chore
+# Example: "feat: add new user authentication flow"
+
+# Get the commit message
+commit_message=$(cat "$1")
+
+# Define the regex pattern for the commit message
+pattern="^(feat|fix|test|chore): .+"
+
+# Check if the commit message matches the pattern
+if ! echo "$commit_message" | grep -Eq "$pattern"; then
+  echo "Error: Invalid commit message format."
+  echo "Commit message should be in the format: <type>: <description>"
+  echo "Allowed types: feat, fix, test, chore"
+  exit 1
+fi
