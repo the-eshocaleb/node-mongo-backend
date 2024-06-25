@@ -10,7 +10,7 @@
     "test": "mocha test/*.spec.js --exit ",
     "start": "nodemon app.js",
     "test:coverage": "nyc --reporter=text npm test",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +36,4 @@
     "sinon-chai": "^3.7.0",
     "supertest": "^7.0.0"
   }
-
-  
 }
