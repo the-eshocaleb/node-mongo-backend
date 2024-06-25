@@ -9,12 +9,12 @@ commit_message=$(cat "$1")
 
 echo $commit_message
 # Define the regex pattern for the commit message
-# pattern="^(feat|fix|test|chore): .+"
+pattern="^(feat|fix|test|chore): .+"
 
-# # Check if the commit message matches the pattern
-# if ! echo "$commit_message" | grep -Eq "$pattern"; then
-#   echo "Error: Invalid commit message format."
-#   echo "Commit message should be in the format: <type>: <description>"
-#   echo "Allowed types: feat, fix, test, chore"
-#   exit 1
-# fi
+# Check if the commit message matches the pattern
+if ! echo "$commit_message" | grep -Eq "$pattern"; then
+  echo "Error: Invalid commit message format."
+  echo "Commit message should be in the format: <type>: <description>"
+  echo "Allowed types: feat, fix, test, chore"
+  exit 1
+fi
